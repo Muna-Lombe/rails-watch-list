@@ -1,8 +1,11 @@
 class ListsController < ApplicationController
+  def landing
+  end
   def index
     @lists = List.all
     @list = List.new
     @bookmars = Bookmark.all
+    @movies = Movie.all
     # if params[:id].nil?
     #   @list = List.new
     # else
@@ -13,10 +16,11 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @bookmarks = @list.bookmarks
-    @movies = []
-    @bookmarks.each do |bk|
-    @movies << Movie.find(bk.movie_id)
-    end
+    # @bookmarks = @list.bookmarks
+    # @movies = []
+    # @bookmarks.each do |bk|
+    # @movies << Movie.find(bk.movie_id)
+    # end
     
   end
 
@@ -41,7 +45,9 @@ class ListsController < ApplicationController
     redirect_to lists_path
   end
   def destroy
-  
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to lists_path, notice: 'Watchlist was successfully destroyed.'
   end
 
   private

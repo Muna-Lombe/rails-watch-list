@@ -1,0 +1,39 @@
+<h1>Movies go here</h1>
+  <div class = "cards">
+    <% @movies.each do |movie| %> 
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=<%= movie.poster_url %> alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= movie.title %></h5>
+          <p class="card-text"><%= movie.overview %></p>
+          <div class="bookmark">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#movie-<%= movie.id %>" >
+                <i class="fa fa-bookmark" aria-hidden="true"></i>
+              </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="movie-<%= movie.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Add <%= movie.title %> to </p>
+              <ul>
+                  <% @lists.each do |list| %>
+                    <li><%= link_to "#{list.id}.#{list.name}", list_bookmarks_path(list_id: list.id, movie_id: movie.id), method: :post, movie: movie.id%></li>
+                  <% end %>
+              </ul>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>

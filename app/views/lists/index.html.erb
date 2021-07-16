@@ -1,16 +1,6 @@
-<h1>List of Lists</h1>
 <div>
-  <ul>
-    <% @lists.each do |list| %>
-      <li><%= list.id %>.<%= list.name %>| <%= link_to  "show", listed_bookmarks_path(list.id) %>| <%= link_to  "edit", edit_list_path(list.id) %></li>
-      
-    <% end %>
-  </ul>
+  <%= render  "sidebar" %>
 </div>
 <div>
-  <%= simple_form_for [@list] do |f| %>
-    <%= f.input :name %>
-    <%= f.association :movies %>
-    <%= f.button :submit %>
-  <% end %>
+  <%= render  "movies" %>
 </div>

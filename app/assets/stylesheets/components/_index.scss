@@ -4,3 +4,9 @@
 @import "navbar";
 @import "banner";
 @import "cards";
+@import "sidebar";
+
+body{
+  display: grid;
+  grid-template-columns: 400px;
+}

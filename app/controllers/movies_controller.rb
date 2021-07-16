@@ -1,7 +1,5 @@
 class MoviesController < ApplicationController
   def landing 
-    @movies = Movie.all
-    
   end
   def index
     @movies = Movie.all

@@ -1,11 +1,12 @@
 .cards{
+  margin:20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 10px;
   border: 2px solid rgba(0,0,0,0.1); 
   border-radius: 4; 
-  width: 350px;
+  width:fit-content;
   .form-inputs{
     width:80%;
   }
