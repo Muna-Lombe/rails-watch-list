@@ -1,0 +1,18 @@
+<h1>Movies go here</h1>
+  <div class = "cards">
+    <% @movies.each do |movie| %> 
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=<%= movie.poster_url %> alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= movie.title %></h5>
+          <p class="card-text"><%= movie.overview %></p>
+          <div class="bookmark">
+            
+            <i class="fa fa-bookmark" aria-hidden="true">
+            delete
+            </i>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
