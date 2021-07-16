@@ -6,9 +6,9 @@
           <li><%= list.id %>.<%= list.name %> <br>| <%= link_to  "show", listed_bookmarks_path(list.id) %>| <%= link_to  "edit", edit_list_path(list.id) %>|<%= link_to "delete bookmark", delete_path(list), method: :delete, data: { confirm: 'Are you sure?' }%></li>
         <% end %>
       </ul>
+    </div>
       <%= simple_form_for [@list] do |f| %>
         <%= f.input :name %>
         <%= f.button :submit %>
       <% end %>
-    </div>
   </div>

@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body{
+  width:100vw;
+  margin:0;
+  .navbar{
+    width:100vw;
+    background-image: linear-gradient(rgba(63, 55, 55, 0.609),rgba(122, 18, 18, 0.616))
+  }
+}
