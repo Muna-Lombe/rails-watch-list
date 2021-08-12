@@ -1,8 +1,7 @@
-body {
-  
-  margin:20px;
-  background-color: #fbfbfb;
-}
+// body {
+  // margin:20px;
+//   background-color: #fbfbfb;
+// }
 @media (min-width: 991.98px) {
   main {
     padding-left: 240px;
@@ -11,25 +10,25 @@ body {
 
 /* Sidebar */
 .sidebar {
+  display:flex;
+  flex-direction: column;
+  // margin:20px 0 5px 0;
+  padding-top:20px;
   background-image: linear-gradient(rgba(54, 51, 51, 0.705),rgba(73, 7, 7, 0.562));
-  position:fixed;
-  top:20px;
-  right:20px;
-  top: 0;
-  bottom: 0;
-  padding: 20px 0 0; /* Height of navbar */
+  // position:fixed;
+  padding: 20px; /* Height of navbar */
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
-  width: 440px;
-  z-index: 600;
-  .content{
+  width: 30vw;
+  // z-index: 600;
+  .sidebar-content{
     color:#fbfbfb;
     position:-webkit-sticky;
-    top: 0;
-    height: calc(100vh - 20px);
+    // height: calc(100vh - 20px);
     padding-top: 0.5rem;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 500px;
+    // border: 3px solid green;
+    // height: 500px;
     a:hover {
       color:white;
       background-image: linear-gradient(rgba(17, 17, 17, 0.568),rgba(47, 8, 8, 0.562));
@@ -37,14 +36,14 @@ body {
     }
   }
   
-  form{
+  .form-content{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
     position:fixed;
     bottom:10px;
-    width:20%;
+    width:20vw;
     input{
       background-image: linear-gradient(rgba(32, 28, 28, 0.5),rgba(47, 8, 8, 0.562));
       outline: 0;

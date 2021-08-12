@@ -10,13 +10,32 @@
 
 // Your CSS partials
 @import "components/index";
-@import "pages/index";
+// @import "pages/index";
 
 body{
-  width:100vw;
+  // width:100vw;
+  // margin-bottom:24px;
   margin:0;
-  .navbar{
+  .container{
+    // display:flex;
+    // flex-direction: column;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding:0 0 10px 0;
+    position:relative;
+    margin:0;
     width:100vw;
-    background-image: linear-gradient(rgba(63, 55, 55, 0.609),rgba(122, 18, 18, 0.616))
+    .navbar{
+      position:fixed;
+      width:100vw;
+      background-image: linear-gradient(rgb(63, 55, 55),rgb(122, 18, 18));
+      z-index: 999;
+    }
+    .content{
+      display:flex;
+      justify-content: space-between;
+      // margin-bottom:5px;
+      width:100vw;
+    }
   }
 }
