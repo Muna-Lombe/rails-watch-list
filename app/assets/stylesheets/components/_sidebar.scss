@@ -1,7 +1,4 @@
-// body {
-  // margin:20px;
-//   background-color: #fbfbfb;
-// }
+
 @media (min-width: 991.98px) {
   main {
     padding-left: 240px;
@@ -12,45 +9,63 @@
 .sidebar {
   display:flex;
   flex-direction: column;
-  // margin:20px 0 5px 0;
-  padding-top:20px;
+  margin-bottom:2px;
+  // padding-top:20px;
   background-image: linear-gradient(rgba(54, 51, 51, 0.705),rgba(73, 7, 7, 0.562));
-  // position:fixed;
   padding: 20px; /* Height of navbar */
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
   width: 30vw;
-  // z-index: 600;
+  height:100%;
+   /* sexy transition effect */
+  
   .sidebar-content{
-    color:#fbfbfb;
-    position:-webkit-sticky;
-    // height: calc(100vh - 20px);
-    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow-x: hidden;
-    overflow-y: scroll;
+
+    // overflow-y: scroll;
+    padding-bottom: 8px;
+    height: 99%;
+    // position: inherit;
+    .bookmarks{
+      color:#fbfbfb;
+      padding-top: 0.5rem;
+      height: 76%;
+      overflow-y: scroll;
+      ul{
+        list-style: none;
+      }
+
+    // overflow-x: hidden;
+    
     // border: 3px solid green;
     // height: 500px;
-    a:hover {
-      color:white;
-      background-image: linear-gradient(rgba(17, 17, 17, 0.568),rgba(47, 8, 8, 0.562));
-      outline: none;
+      a:hover {
+        color:white;
+        background-image: linear-gradient(rgba(17, 17, 17, 0.568),rgba(47, 8, 8, 0.562));
+        outline: none;
+      }
     }
-  }
-  
-  .form-content{
+    .create-form-content{
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items:center;
     position:fixed;
-    bottom:10px;
+    height:20%;
+    bottom:8px;
     width:20vw;
-    input{
-      background-image: linear-gradient(rgba(32, 28, 28, 0.5),rgba(47, 8, 8, 0.562));
-      outline: 0;
+      input{
+        background-image: linear-gradient(rgba(32, 28, 28, 0.5),rgba(47, 8, 8, 0.562));
+        outline: 0;
+      }
     }
-  }
-}
 
+  }
+  
+  
+}
 @media (max-width: 991.98px) {
   .sidebar {
     width: 100%;
