@@ -1,16 +1,22 @@
 <div class = "sidebar">
+  <div class="title">
     <h1>Your saved WatchLists</h1>
-    <div class= "sidebar-content">
+  </div>
+  
+  <div class= "sidebar-content">
+    <div class="bookmarks">
       <ul>
-        <% @lists.each do |list| %>
-          <li><%= list.id %>.<%= list.name %> <br>| <%= link_to  "show", listed_bookmarks_path(list.id) %>| <%= link_to  "edit", edit_list_path(list.id) %>|<%= link_to "delete bookmark", delete_path(list), method: :delete, data: { confirm: 'Are you sure?' }%></li>
-        <% end %>
+      <% @lists.each do |list| %>
+        <li><%= list.id %>.<%= list.name %> <br>| <%= link_to  "See Movies", listed_bookmarks_path(list.id) %> | <%= link_to  "Rename", edit_list_path(list.id) %> | <%= link_to "Remove", delete_path(list), method: :delete, data: { confirm: 'Are you sure?' }%></li>
+      <% end %>
       </ul>
     </div>
-    <div class="form-content">
+    <div class="create-form-content">
+      <h4>Create a bookmark</h4>
       <%= simple_form_for [@list] do |f| %>
         <%= f.input :name %>
         <%= f.button :submit %>
       <% end %>
     </div>
   </div>
+</div>
